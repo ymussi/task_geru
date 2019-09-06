@@ -2,8 +2,6 @@ import logging
 import os
 
 from flask_restplus import Api as _Api
-from flask_restplus import reqparse as _reqparse
-from werkzeug.exceptions import HTTPException
 
 log = logging.getLogger(__name__)
 

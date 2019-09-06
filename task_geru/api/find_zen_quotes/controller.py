@@ -1,5 +1,6 @@
 from zen_quotes.quotes import Quotes
 from random import randint
+import uuid
 
 
 class Task():
@@ -19,3 +20,8 @@ class Task():
         resp = Quotes().get_quotes(randint(0, len(list_quotes['quotes']) - 1))
 
         return resp
+
+    def generate_session_id(self):
+        id_session = uuid.uuid1()
+
+        return id_session

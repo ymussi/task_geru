@@ -1,9 +1,8 @@
 from flask_restplus import Resource
-from flask import request, jsonify
+from flask import request, jsonify, session
 from task_geru.api import api
 from task_geru.api.find_zen_quotes.controller import Task
-import logging
-import json
+import logging, json
 
 
 log = logging.getLogger(__name__)
@@ -18,6 +17,7 @@ class Home(Resource):
         """
         Return HOME.
         """
+        session['id'] = Task().generate_session_id()
         res = 'Desafio Web 1.0'
 
         return res
@@ -29,6 +29,7 @@ class Quotes(Resource):
         """
         Return Quotes.
         """
+        session['id'] = Task().generate_session_id()
         res = Task().get_quotes()
 
         return res
@@ -40,6 +41,7 @@ class Quotes(Resource):
         """
         Return Only One Quote.
         """
+        session['id'] = Task().generate_session_id()
         res = Task().get_only_quote(int(quote_number))
 
         return res
@@ -51,6 +53,7 @@ class Quotes(Resource):
         """
         Return Random Quotes.
         """
+        session['id'] = Task().generate_session_id()
         res = Task().get_random_quote()
 
         return res

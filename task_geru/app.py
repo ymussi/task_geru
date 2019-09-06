@@ -2,8 +2,10 @@ from task_geru.api.find_zen_quotes.viewer import ns as quotes
 from task_geru.api import api
 from flask import Flask, Blueprint
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
+app.secret_key = os.urandom(24)
 blueprint = Blueprint('api', __name__)
 
 api.init_app(blueprint)

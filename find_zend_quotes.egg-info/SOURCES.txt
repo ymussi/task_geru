@@ -1,7 +1,0 @@
-setup.py
-find_zend_quotes.egg-info/PKG-INFO
-find_zend_quotes.egg-info/SOURCES.txt
-find_zend_quotes.egg-info/dependency_links.txt
-find_zend_quotes.egg-info/not-zip-safe
-find_zend_quotes.egg-info/requires.txt
-find_zend_quotes.egg-info/top_level.txt

@@ -10,8 +10,13 @@ ARG RUN_ENVIRONMENT
 ENV PYTHONUNBUFFERED=0
 ENV DBENV=${RUN_ENVIRONMENT}
 
+RUN pip install --upgrade pip && \
+    pip install setuptools --upgrade
+
 RUN apt-get update && pip install --upgrade pip && \
-    ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
+    ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime && dpkg-reconfigure -f noninteractive tzdata && \
+    cd /app/ && git clone https://github.com/ymussi/zen_quotes.git && \
+    cd zen_quotes && python3 setup.py develop && cd ..
 
 RUN python setup.py develop
 

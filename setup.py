@@ -15,9 +15,6 @@ setup(
                         'sqlalchemy==1.2.18',
                         'flask >= 1.0.2',
                         'flask-restplus',
-                        'configparser >= 3.5.0',
-                        'requests >= 2.18.4',
-                        'flask_cors',
-                        'zen_quotes'],
+                        'flask_cors'],
     zip_safe=False
     ),

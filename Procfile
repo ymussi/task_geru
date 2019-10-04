@@ -1,2 +1,2 @@
 web: python setup.py develop
-web: python task_geru/app.py
+web: gunicorn app:app --bind 0.0.0.0:5000 -w 4 --reload --access-logfile -

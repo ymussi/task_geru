@@ -1,9 +1,13 @@
 from setuptools import setup, find_packages
 
+# install requirements of the project
+with open("requirements.txt") as req:
+    install_requires = req.read()
+
 setup(
     name='find_zend_quotes',
     version = "1.0",
-    setup_requires=["setuptools-git-version"],
+    # setup_requires=["setuptools-git-version"],
     packages = find_packages(),
     description='',
     author='Yuri Mussi',
@@ -11,10 +15,5 @@ setup(
     license='BSD',
     url='https://github.com/ymussi/find_zen_quotes',
     keywords = "Mussi",
-    install_requires = ['gunicorn',
-                        'sqlalchemy==1.2.18',
-                        'flask >= 1.0.2',
-                        'flask-restplus',
-                        'flask_cors'],
     zip_safe=False
     ),

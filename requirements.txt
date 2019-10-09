@@ -1,0 +1,6 @@
+gunicorn
+sqlalchemy==1.2.18
+flask >= 1.0.2
+flask-restplus
+flask_cors
+zen_quotes

@@ -1,7 +1,7 @@
 from flask_restplus import Resource
 from flask import request, jsonify, session
-from task_geru.api import api
-from task_geru.api.find_zen_quotes.controller import Task
+from task_zen.api import api
+from task_zen.api.find_zen_quotes.controller import Task
 import logging, json
 
 

@@ -2,9 +2,9 @@ FROM python:3.6
 LABEL mantainer="ymussi@gmail.com"
 LABEL fileversion=v0.1
 
-WORKDIR /app/task_geru
+WORKDIR /app/task_zen
 
-COPY . /app/task_geru
+COPY . /app/task_zen
 
 ARG RUN_ENVIRONMENT
 ENV PYTHONUNBUFFERED=0
@@ -21,4 +21,4 @@ RUN apt-get update && pip install --upgrade pip && \
 RUN python setup.py develop
 
 
-ENTRYPOINT ["/bin/sh","/app/task_geru/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh","/app/task_zen/entrypoint.sh"]

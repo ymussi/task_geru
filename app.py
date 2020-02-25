@@ -1,5 +1,5 @@
-from task_geru.api.find_zen_quotes.viewer import ns as quotes
-from task_geru.api import api
+from task_zen.api.find_zen_quotes.viewer import ns as quotes
+from task_zen.api import api
 from flask import Flask, Blueprint
 from flask_cors import CORS
 import os
